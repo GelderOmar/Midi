@@ -1,0 +1,69 @@
+:root {
+  --gris: #aaa;
+  --rojo: #e93d50;
+  --rojo-oscuro: #af303f;
+  --blanco: #fff;
+  --luz: rgb(229, 255, 0);
+  --metal: #2e2e2e;
+  --cian: #00bcd4;
+}
+
+body {
+  background: linear-gradient(to right, #2e2e2e, #1c1c1c);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+}
+
+header h1 {
+  color: var(--cian);
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-shadow: 0 0 10px var(--cian);
+}
+
+.teclado {
+  background: #333;
+  box-shadow: 0 0 20px var(--cian);
+  border-radius: 15px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 20px;
+}
+
+.tecla {
+  background: #444;
+  border-radius: 15px;
+  box-shadow: 0 0 5px var(--gris);
+  color: var(--blanco);
+  cursor: pointer;
+  height: 100px;
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 100px;
+  text-align: center;
+  width: 100px;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.tecla.activa,
+.tecla:active {
+  background: var(--cian);
+  box-shadow: 0 0 10px var(--cian) inset;
+  color: var(--metal);
+}
+
+.tecla.focus,
+.tecla:focus {
+  outline: none;
+  box-shadow: 0 0 10px var(--cian);
+}
+
+footer {
+  display: none; /* Opcional: oculta el elemento footer si no es necesario en la vista principal */
+}
